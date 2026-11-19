@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Elevation Barbershop — Official Brand Stylesheet & Architectural Overrides
+   Colors: Matte Slate (#1F252A), Deep Slate (#161B1F), Brushed Silver (#E2E6EA),
+           Petrol Ocean Teal (#179BAE / #33D1E3)
+   Fonts:  Outfit (Headings/Numbers/UI) + Plus Jakarta Sans (Body)
+   ========================================================================== */
+
+:root {
+  --bg-slate: #1f252a;
+  --bg-slate-deep: #161b1f;
+  --bg-slate-surface: #2a3238;
+  --bg-slate-elevated: #323c44;
+  --border-slate: #38424b;
+  --text-silver: #e2e6ea;
+  --text-silver-muted: #9ca3ac;
+  --accent-petrol: #179bae;
+  --accent-petrol-bright: #33d1e3;
+  --accent-petrol-dark: #117786;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-slate-deep);
+  color: var(--text-silver);
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-slate);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Scrollbar (Deep Slate + Petrol Ocean Teal) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-slate-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #33404a;
+  border-radius: 5px;
+  border: 2px solid var(--bg-slate-deep);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-petrol);
+}
+
+/* Architectural Shiplap Slate Wall Pattern (echoing studio 3D sign backdrop) */
+.bg-shiplap-slate {
+  background-color: var(--bg-slate);
+  background-image:
+    radial-gradient(circle at 75% 25%, rgba(23, 155, 174, 0.14) 0%, rgba(23, 155, 174, 0.03) 40%, transparent 70%),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.028) 0px,
+      rgba(255, 255, 255, 0.028) 1px,
+      transparent 1px,
+      transparent 38px,
+      rgba(0, 0, 0, 0.24) 38px,
+      rgba(0, 0, 0, 0.24) 40px
+    );
+}
+
+.bg-shiplap-deep {
+  background-color: var(--bg-slate-deep);
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 44px,
+      rgba(0, 0, 0, 0.28) 44px,
+      rgba(0, 0, 0, 0.28) 46px
+    );
+}
+
+/* Brushed Platinum Silver Metallic Text Gradient */
+.text-silver-metallic {
+  background: linear-gradient(135deg, #ffffff 0%, #e7eaee 35%, #c2c8cf 68%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Petrol Teal Glow & Architectural Elevation Shadows */
+.shadow-petrol-glow {
+  box-shadow: 0 12px 32px -8px rgba(23, 155, 174, 0.45), 0 0 0 1px rgba(51, 209, 227, 0.22);
+}
+
+.shadow-card-arch {
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Header Scrolled Glass State */
+#header.header-scrolled {
+  background-color: rgba(22, 27, 31, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: rgba(56, 66, 75, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Active Navigation Underline */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-petrol), var(--accent-petrol-bright));
+  border-radius: 9999px;
+  transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--accent-petrol-bright);
+}
+
+/* Scroll Reveal Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Gallery Card Zoom & Petrol-Teal Border Shimmer */
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-slate);
+  transition: border-color 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.gallery-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, transparent 30%, rgba(51, 209, 227, 0.14) 50%, transparent 70%);
+  transform: translateX(-110%);
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gallery-card:hover {
+  border-color: rgba(51, 209, 227, 0.65);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px -14px rgba(0, 0, 0, 0.65), 0 0 24px -6px rgba(23, 155, 174, 0.3);
+}
+
+.gallery-card:hover::before {
+  transform: translateX(110%);
+}
+
+.gallery-card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Service Card Subtle Left Architectural Rail */
+.service-card {
+  transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(51, 209, 227, 0.55);
+  background-color: var(--bg-slate-elevated);
+  transform: translateY(-3px);
+}
+
+/* Mobile Drawer Transitions */
+#mobile-overlay {
+  transition: opacity 0.3s ease;
+}
+
+#mobile-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobile-menu {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Lightbox Modal Transitions */
+#lightbox {
+  transition: opacity 0.25s ease;
+}
+
+#lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hero Visual Mode Tabs */
+.hero-view-btn {
+  transition: all 0.2s ease;
+}
+
+.hero-view-btn.active {
+  background-color: var(--accent-petrol);
+  color: #ffffff;
+  border-color: var(--accent-petrol-bright);
+  box-shadow: 0 4px 14px -2px rgba(23, 155, 174, 0.45);
+}
+
+/* Floating Top-E Logo Switcher Pills */
+.e-option-pill {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.e-option-pill:hover {
+  border-color: rgba(51, 209, 227, 0.65);
+  color: #ffffff;
+}
+
+.e-option-pill.active {
+  background: linear-gradient(135deg, var(--accent-petrol), var(--accent-petrol-dark));
+  border-color: var(--accent-petrol-bright);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 6px 16px -4px rgba(23, 155, 174, 0.55);
+}
+
+/* Current Day Highlight Row in Studio Hours Table */
+.hours-row-today {
+  background-color: rgba(23, 155, 174, 0.13);
+  border-color: rgba(51, 209, 227, 0.35) !important;
+}
+
+.hours-row-today .hours-day-label {
+  color: var(--accent-petrol-bright);
+  font-weight: 700;
+}

@@ -1,0 +1,89 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Matte Architectural Slate Spotlight -->
+    <radialGradient id="slateBgGrad" cx="50%" cy="28%" r="72%" fx="50%" fy="20%">
+      <stop offset="0%" stop-color="#2D363E"/>
+      <stop offset="55%" stop-color="#1F252A"/>
+      <stop offset="100%" stop-color="#161B1F"/>
+    </radialGradient>
+
+    <!-- Brushed Platinum Silver (matches warm-cool metallic sign sheen) -->
+    <linearGradient id="silverGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="22%"  stop-color="#E7EAEE"/>
+      <stop offset="48%"  stop-color="#C9C5BF"/>
+      <stop offset="72%"  stop-color="#EDEFF2"/>
+      <stop offset="100%" stop-color="#9CA3AC"/>
+    </linearGradient>
+
+    <!-- Vertical Brushed Silver for E Monogram -->
+    <linearGradient id="monogramGrad" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="26%"  stop-color="#E8EAED"/>
+      <stop offset="54%"  stop-color="#CBC4BC"/>
+      <stop offset="78%"  stop-color="#F1F3F5"/>
+      <stop offset="100%" stop-color="#9BA2AB"/>
+    </linearGradient>
+
+    <!-- Razor Handle Scales -->
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F5F7F9"/>
+      <stop offset="45%"  stop-color="#D2D6DC"/>
+      <stop offset="100%" stop-color="#8F97A0"/>
+    </linearGradient>
+
+    <!-- Razor Blade Mirror Steel -->
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="40%"  stop-color="#DCE1E6"/>
+      <stop offset="100%" stop-color="#9AA2AB"/>
+    </linearGradient>
+
+    <!-- Razor Hollow-Grind Bevel Shadow -->
+    <linearGradient id="bladeHollowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#A6AEB7"/>
+      <stop offset="55%"  stop-color="#E4E8EC"/>
+      <stop offset="100%" stop-color="#7F8790"/>
+    </linearGradient>
+
+    <!-- Petrol Ocean Teal (matches BARBERSHOP metallic lettering) -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#42E0F2"/>
+      <stop offset="48%"  stop-color="#19A5BA"/>
+      <stop offset="100%" stop-color="#117E8F"/>
+    </linearGradient>
+
+    <!-- Subtle 3D Soft Drop Shadow -->
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="subtleShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#slateBgGrad)"/>
+  <rect x="14" y="14" width="484" height="484" rx="96" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+  <g transform="translate(120, 108) scale(1.25)" filter="url(#softShadow)">
+    <path fill="url(#monogramGrad)" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"
+      d="M 62,0
+         L 216,0
+         L 182,46
+         L 68,46
+         Q 56,46 56,58
+         L 56,69
+         Q 56,81 68,81
+         L 172,81
+         L 140,125
+         L 68,125
+         Q 56,125 56,137
+         L 56,148
+         Q 56,160 68,160
+         L 210,160
+         L 176,210
+         L 18,210
+         Q 0,210 0,192
+         L 0,62
+         A 62,62 0 0 1 62,0 Z" />
+  </g>
+  <rect x="176" y="408" width="160" height="16" rx="8" fill="url(#tealGrad)" filter="url(#subtleShadow)"/>
+</svg>
