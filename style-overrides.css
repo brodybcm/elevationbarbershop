@@ -274,3 +274,17 @@ h1, h2, h3, h4, .font-display {
   color: var(--accent-petrol-bright);
   font-weight: 700;
 }
+
+/* Floating Back-to-Top Button */
+#back-to-top {
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

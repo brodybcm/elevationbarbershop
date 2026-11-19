@@ -14,6 +14,7 @@
     initDynamicStudioHours();
     initCareerInquiryShortcut();
     initContactForm();
+    initBackToTop();
   });
 
   /* ------------------------------------------------------------------------
@@ -328,5 +329,28 @@
         form.classList.remove('hidden');
       });
     }
+  }
+
+  /* ------------------------------------------------------------------------
+     11. Floating Back-to-Top Button
+     ------------------------------------------------------------------------ */
+  function initBackToTop() {
+    const btn = document.getElementById('back-to-top');
+    if (!btn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 })();
