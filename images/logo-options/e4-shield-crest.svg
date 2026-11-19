@@ -7,22 +7,24 @@
       <stop offset="100%" stop-color="#161B1F"/>
     </radialGradient>
 
-    <!-- Brushed Platinum Silver (matches warm-cool metallic sign sheen) -->
-    <linearGradient id="silverGrad" x1="15%" y1="0%" x2="85%" y2="100%">
-      <stop offset="0%"   stop-color="#FFFFFF"/>
-      <stop offset="22%"  stop-color="#E7EAEE"/>
-      <stop offset="48%"  stop-color="#C9C5BF"/>
-      <stop offset="72%"  stop-color="#EDEFF2"/>
-      <stop offset="100%" stop-color="#9CA3AC"/>
+    <!-- Realistic 3D Brushed Stainless-Platinum Metallic Gradient -->
+    <linearGradient id="silverGrad" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%"   stop-color="#F8FAFC"/>
+      <stop offset="18%"  stop-color="#DCE1E7"/>
+      <stop offset="42%"  stop-color="#9EA6AF"/>
+      <stop offset="60%"  stop-color="#C5C1BA"/>
+      <stop offset="80%"  stop-color="#EEF1F4"/>
+      <stop offset="100%" stop-color="#737B84"/>
     </linearGradient>
 
-    <!-- Vertical Brushed Silver for E Monogram -->
-    <linearGradient id="monogramGrad" x1="12%" y1="0%" x2="88%" y2="100%">
+    <!-- 3D Brushed Silver for E-04 Shield Crest & Monogram -->
+    <linearGradient id="monogramGrad" x1="10%" y1="0%" x2="90%" y2="100%">
       <stop offset="0%"   stop-color="#FFFFFF"/>
-      <stop offset="26%"  stop-color="#E8EAED"/>
-      <stop offset="54%"  stop-color="#CBC4BC"/>
-      <stop offset="78%"  stop-color="#F1F3F5"/>
-      <stop offset="100%" stop-color="#9BA2AB"/>
+      <stop offset="20%"  stop-color="#D6DCE2"/>
+      <stop offset="46%"  stop-color="#9AA1A9"/>
+      <stop offset="66%"  stop-color="#C8C4BC"/>
+      <stop offset="84%"  stop-color="#EAEEF2"/>
+      <stop offset="100%" stop-color="#737B84"/>
     </linearGradient>
 
     <!-- Razor Handle Scales -->
@@ -53,12 +55,14 @@
       <stop offset="100%" stop-color="#117E8F"/>
     </linearGradient>
 
-    <!-- Subtle 3D Soft Drop Shadow -->
-    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="135%">
-      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    <!-- Stacked 3D Dark-Metal Extrusion Bevel & Ambient Wall Shadow -->
+    <filter id="softShadow" x="-18%" y="-18%" width="136%" height="145%">
+      <feDropShadow dx="0" dy="3" stdDeviation="1.5" flood-color="#0B0E11" flood-opacity="0.85"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.58"/>
     </filter>
     <filter id="subtleShadow" x="-15%" y="-15%" width="130%" height="135%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="1.2" flood-color="#0B0E11" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.45"/>
     </filter>
   </defs>
   <g transform="translate(512.00, 502.00) scale(1.0800)">
