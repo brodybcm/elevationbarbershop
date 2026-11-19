@@ -154,7 +154,7 @@
      6. Live Top-E Monogram Switcher (Preview Original & E-01..E-06 Live)
      ------------------------------------------------------------------------ */
   function initLogoOptionSwitcher() {
-    const STORAGE_KEY = 'elevation_selected_e_logo';
+    const STORAGE_KEY = 'elevation_selected_e_logo_v2';
     const previewBar = document.getElementById('logo-preview-bar');
     const showBarBtn = document.getElementById('show-preview-bar-btn');
     const hideBarBtn = document.getElementById('hide-preview-bar-btn');
@@ -194,8 +194,8 @@
     };
 
     const applyOption = (optionKey) => {
-      const selected = optionsMap[optionKey] || optionsMap['e0-original'];
-      const effectiveKey = optionsMap[optionKey] ? optionKey : 'e0-original';
+      const selected = optionsMap[optionKey] || optionsMap['e4-shield-crest'];
+      const effectiveKey = optionsMap[optionKey] ? optionKey : 'e4-shield-crest';
 
       logoTargets.forEach((img) => {
         img.setAttribute('src', selected.src);
